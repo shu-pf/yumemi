@@ -89,6 +89,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@types/highcharts@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/highcharts/-/highcharts-7.0.0.tgz#88fc2140504dac329eb93d6e06a457c8db0d7f7e"
+  integrity sha512-YDevls0s9uqz6VEbchxp+NEaKssAPq5aDZgqEUpxOIUCQEncQtXxibp1w4lvgKyhM4qDejAcSZ+DKfA/kzqR0A==
+  dependencies:
+    highcharts "*"
+
 "@types/json-schema@^7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
@@ -962,6 +969,16 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+highcharts-vue@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/highcharts-vue/-/highcharts-vue-1.4.0.tgz#4bdaaddc6b9a3eea0df70d29a22ae713d28e4a0c"
+  integrity sha512-fTPqJmU/wR/nUEtofbC/iJqcgULGcP3C0Hd4YYCKH2FiiteNs7UidjSM4eYj5Y4ldpOVhwPtNj/m6XwC3ajp6g==
+
+highcharts@*:
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-9.3.1.tgz#dbeb39c2e5b298b02ccc459103f5f1c8daea1264"
+  integrity sha512-T5BjvY2CDtqlKRbid1Jd22psBp8tV9+7fm+x7h+EZuXF0OVDLR5128sRuC6WCWVss4cTVzS6PKnlnXKfYskIhw==
 
 htmlparser2@^6.1.0:
   version "6.1.0"
