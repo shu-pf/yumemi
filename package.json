@@ -7,6 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@types/highcharts": "^7.0.0",
+    "highcharts-vue": "^1.4.0",
     "vue": "^3.2.16"
   },
   "devDependencies": {
