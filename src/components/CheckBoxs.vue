@@ -11,8 +11,12 @@ defineProps<Props>();
 <template>
   <div>
     <h2>都道府県</h2>
-    <div>
-      <template v-for="prefecture in prefectures" :key="prefecture.prefCode">
+    <div class="check-boxs">
+      <div
+        v-for="prefecture in prefectures"
+        :key="prefecture.prefCode"
+        class="check-boxs__box"
+      >
         <input
           :id="prefecture.prefCode.toString()"
           type="checkbox"
@@ -21,7 +25,17 @@ defineProps<Props>();
         <label :for="prefecture.prefCode.toString()">{{
           prefecture.prefName
         }}</label>
-      </template>
+      </div>
     </div>
   </div>
 </template>
+
+<style>
+.check-boxs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.check-boxs__box {
+  margin-right: 8px;
+}
+</style>
