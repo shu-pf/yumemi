@@ -6,6 +6,19 @@ interface Props {
 }
 
 defineProps<Props>();
+
+interface Emits {
+  (e: "changed", value: { prefCode: string; status: boolean }): void;
+}
+
+const emit = defineEmits<Emits>();
+
+function changed(event: Event) {
+  emit("changed", {
+    prefCode: (event.target as HTMLInputElement).id,
+    status: (event.target as HTMLInputElement).checked,
+  });
+}
 </script>
 
 <template>
@@ -21,6 +34,7 @@ defineProps<Props>();
           :id="prefecture.prefCode.toString()"
           type="checkbox"
           :name="prefecture.prefName"
+          @change="changed($event)"
         />
         <label :for="prefecture.prefCode.toString()">{{
           prefecture.prefName

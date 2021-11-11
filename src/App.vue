@@ -10,11 +10,15 @@ const prefectures = ref([] as Prefecture[]);
 onMounted(async () => {
   prefectures.value = await resasApi.prefectures();
 });
+
+function changed(e: { prefCode: string; status: boolean }) {
+  console.log(e);
+}
 </script>
 
 <template>
   <h1>都道府県別の人口の推移</h1>
-  <Checkboxs :prefectures="prefectures" />
+  <Checkboxs :prefectures="prefectures" @changed="changed" />
   <Chart class="chart"></Chart>
 </template>
 
