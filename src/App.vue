@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
-import Checkboxs from "./components/CheckBoxs.vue";
+import Checkboxs from "./components/CheckBoxes.vue";
 import Chart from "./components/Chart.vue";
 import resasApi, { Prefecture } from "./services/RESAS-API";
 
