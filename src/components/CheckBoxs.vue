@@ -30,12 +30,12 @@ defineProps<Props>();
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .check-boxs {
   display: flex;
   flex-wrap: wrap;
-}
-.check-boxs__box {
-  margin-right: 8px;
+  &__box {
+    margin-right: 8px;
+  }
 }
 </style>

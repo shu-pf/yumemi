@@ -62,7 +62,10 @@ const chartOptions = ref({
 </script>
 
 <template>
-  <Chart :options="chartOptions"></Chart>
+  <div>
+    <h2>人口数推移グラフ</h2>
+    <Chart :options="chartOptions"></Chart>
+  </div>
 </template>
 
 <style></style>
