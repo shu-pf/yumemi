@@ -1,11 +1,50 @@
-# Vue 3 + Typescript + Vite
+## 説明
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+コーディングテストの課題です。
+チェックボックスで指定した、都道府県別の人口推移を調べることが出来ます。
 
-## Recommended IDE Setup
+## デモ
+
+https://keen-goldwasser-7f0c09.netlify.app/
+
+## 主な依存関係
+
+- node v14
+- Vue 3
+- Typescript
+- Vite
+- Highcharts
+- ESLint/Prettier
+- jest
+- sass
+- [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup)
+
+## 推奨 IDE 環境
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-## Type Support For `.vue` Imports in TS
+## インストール
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+```
+$ yarn install
+```
+
+## 使い方
+
+### ローカルでの立ち上げ
+
+```
+$ yarn dev
+```
+
+### テスト
+
+```
+$ yarn test
+```
+
+### ビルド
+
+```
+$ yarn build
+```
