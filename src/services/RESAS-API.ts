@@ -14,6 +14,18 @@ class apiService {
       return res.data.result;
     });
   }
+  populationComposition(prefCode: number): Promise<any> {
+    return apiClient
+      .get("/api/v1/population/composition/perYear", {
+        params: {
+          prefCode,
+          cityCode: "-",
+        },
+      })
+      .then((res) => {
+        return res.data.result;
+      });
+  }
 }
 
 export interface Prefecture {

@@ -2,6 +2,17 @@
 import { ref } from "vue";
 import { Chart } from "highcharts-vue";
 
+interface PopulationComposition {
+  name: string;
+  data: [number, number];
+}
+
+interface Props {
+  populationCompositions: PopulationComposition[];
+}
+
+const props = defineProps<Props>();
+
 const chartOptions = ref({
   chart: {
     marginTop: 25,
@@ -25,7 +36,7 @@ const chartOptions = ref({
     },
   },
   xAxis: {
-    tickInterval: 1,
+    tickInterval: 5,
     title: { align: "high", text: "年度" },
   },
   legend: {
@@ -37,24 +48,7 @@ const chartOptions = ref({
     verticalAlign: "top",
     y: 20,
   },
-  series: [
-    {
-      name: "北海道",
-      data: [
-        [2020, 400000],
-        [2021, 500000],
-        [2022, 800000],
-      ],
-    },
-    {
-      name: "青森県",
-      data: [
-        [2020, 500000],
-        [2021, 500000],
-        [2022, 800000],
-      ],
-    },
-  ],
+  series: props.populationCompositions,
   credits: {
     enabled: false,
   },

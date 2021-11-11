@@ -8,13 +8,17 @@ interface Props {
 defineProps<Props>();
 
 interface Emits {
-  (e: "changed", value: { prefCode: string; status: boolean }): void;
+  (
+    e: "changed",
+    value: { prefName: string; prefCode: string; status: boolean }
+  ): void;
 }
 
 const emit = defineEmits<Emits>();
 
 function changed(event: Event) {
   emit("changed", {
+    prefName: (event.target as HTMLInputElement).name,
     prefCode: (event.target as HTMLInputElement).id,
     status: (event.target as HTMLInputElement).checked,
   });
