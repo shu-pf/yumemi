@@ -14,7 +14,7 @@ class apiService {
       return res.data.result;
     });
   }
-  populationComposition(prefCode: number): Promise<any> {
+  populationComposition(prefCode: number): Promise<compositionPerYear> {
     return apiClient
       .get("/api/v1/population/composition/perYear", {
         params: {
@@ -31,6 +31,21 @@ class apiService {
 export interface Prefecture {
   prefCode: number;
   prefName: string;
+}
+
+interface compositionPerYear {
+  boundaryYear: number;
+  data: [
+    {
+      label: string;
+      data: [
+        {
+          year: number;
+          value: number;
+        }
+      ];
+    }
+  ];
 }
 
 export default new apiService();
