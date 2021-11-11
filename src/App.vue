@@ -4,6 +4,7 @@ import { ref, onMounted } from "vue";
 import Checkboxs from "./components/CheckBoxes.vue";
 import Chart from "./components/Chart.vue";
 import resasApi, { Prefecture } from "./services/RESAS-API";
+import * as Highcharts from "highcharts";
 
 const prefectures = ref([] as Prefecture[]);
 
@@ -11,12 +12,7 @@ onMounted(async () => {
   prefectures.value = await resasApi.prefectures();
 });
 
-interface PopulationComposition {
-  name: string;
-  data: [number, number];
-}
-
-const populationCompositions = ref([] as PopulationComposition[]);
+const populationCompositions = ref([] as Highcharts.SeriesOptionsType[]);
 
 function changed(e: { prefName: string; prefCode: string; status: boolean }) {
   if (e.status) {
@@ -24,12 +20,13 @@ function changed(e: { prefName: string; prefCode: string; status: boolean }) {
       const resParsed = res.data[0].data.map(function (d: {
         year: number;
         value: number;
-      }) {
+      }): [number, number] {
         return [d.year, d.value];
       });
 
       populationCompositions.value.push({
         name: e.prefName,
+        type: "line",
         data: resParsed,
       });
     });
