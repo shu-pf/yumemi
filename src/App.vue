@@ -1,31 +1,17 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-import HelloWorld from "./components/HelloWorld.vue";
-import { Chart } from "highcharts-vue";
-
-const chartOptions = ref({
-  series: [
-    {
-      data: [1, 2, 3], // sample data
-    },
-  ],
-});
+import Checkboxs from "./components/CheckBoxs.vue";
+import Chart from "./components/Chart.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <Chart :options="chartOptions"></Chart>
+  <h1>都道府県別の人口の推移</h1>
+  <Checkboxs />
+  <Chart class="chart"></Chart>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.chart {
+  padding-top: 10px;
+  height: 250px;
 }
 </style>
