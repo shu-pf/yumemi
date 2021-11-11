@@ -1,10 +1,12 @@
 {
   "name": "yumemi",
   "version": "0.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "jest src"
   },
   "dependencies": {
     "@types/highcharts": "^7.0.0",
@@ -13,18 +15,23 @@
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "@types/jest": "^26",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/eslint-config-typescript": "^9.0.1",
+    "@vue/test-utils": "^2.0.0-rc.16",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^8.0.3",
+    "jest": "^26",
     "prettier": "2.4.1",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
+    "ts-jest": "^26",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
+    "vue-jest": "^5.0.0-alpha.10",
     "vue-tsc": "^0.3.0"
   }
 }
